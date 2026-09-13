@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery — GW Fins | New Orleans Seafood Restaurant</title>
+<meta name="description" content="A look at GW Fins in New Orleans, LA: plated dishes, the bar, and the dining room." />
+<link rel="canonical" href="https://gwfins-restaurant.vercel.app/gallery.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GW Fins" />
+<meta property="og:title" content="Gallery — GW Fins | New Orleans Seafood Restaurant" />
+<meta property="og:description" content="A look at GW Fins in New Orleans, LA: plated dishes, the bar, and the dining room." />
+<meta property="og:url" content="https://gwfins-restaurant.vercel.app/gallery.html" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gallery — GW Fins | New Orleans Seafood Restaurant" />
+<meta name="twitter:description" content="A look at GW Fins in New Orleans, LA: plated dishes, the bar, and the dining room." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "GW Fins",
+  "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop",
+  "servesCuisine": ["Seafood", "Cajun", "Creole"],
+  "priceRange": "$$$$",
+  "telephone": "+1-504-581-3467",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "808 Bienville St",
+    "addressLocality": "New Orleans",
+    "addressRegion": "LA",
+    "postalCode": "70112",
+    "addressCountry": "US"
+  },
+  "url": "https://gwfins-restaurant.vercel.app/",
+  "menu": "https://gwfins-restaurant.vercel.app/menu.html",
+  "acceptsReservations": "True",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "17:00", "closes": "21:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:00", "closes": "22:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">GW <span>FINS</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservations.html">Reservations</a>
+      <a href="about.html">About</a>
+      <a href="private-events.html">Private Events</a>
+      <a href="gallery.html" class="is-active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <span class="header-phone">Call <strong>(504) 581-3467</strong></span>
+      <a href="reservations.html" class="btn btn-brass">Reserve a Table</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-drawer">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservations.html">Reservations</a>
+      <a href="about.html">About</a>
+      <a href="private-events.html">Private Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="reservations.html" class="btn btn-brass btn-block">Reserve a Table</a>
+      <span class="header-phone">Large parties call <strong>(504) 581-3467</strong></span>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero" style="--hero-img: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop');">
+  <div class="container">
+    <span class="eyebrow">Gallery</span>
+    <h1>Food, Room &amp; Ambiance</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="gallery-filters reveal">
+      <button class="gallery-filter is-active" data-filter="all">All</button>
+      <button class="gallery-filter" data-filter="food">Food</button>
+      <button class="gallery-filter" data-filter="interior">Interior</button>
+      <button class="gallery-filter" data-filter="bar">Bar</button>
+    </div>
+
+    <div class="gallery-grid reveal" id="gallery-grid">
+      <figure class="tall" data-category="food">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=900&auto=format&fit=crop" alt="Seared fish entree, styled after the Scalibut" width="900" height="1260" loading="lazy" />
+        <figcaption class="gallery-caption">Scalibut — Entrée</figcaption>
+      </figure>
+      <figure data-category="bar">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=900&auto=format&fit=crop" alt="Craft cocktail, styled after the Whistle Old Fashioned" width="900" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">Whistle Old Fashioned</figcaption>
+      </figure>
+      <figure data-category="interior">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?q=80&w=900&auto=format&fit=crop" alt="Dining room interior" width="900" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">The Dining Room</figcaption>
+      </figure>
+      <figure class="wide" data-category="interior">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="Restaurant bar area" width="1200" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">The Bar</figcaption>
+      </figure>
+      <figure data-category="food">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=900&auto=format&fit=crop" alt="Seared scallop pasta, styled after the Sea Scallop Carbonara" width="900" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">Sea Scallop Carbonara</figcaption>
+      </figure>
+      <figure data-category="food">
+        <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=900&auto=format&fit=crop" alt="Crab dish, styled after Crispy Soft Shell Crab" width="900" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">Crispy Soft Shell Crab</figcaption>
+      </figure>
+      <figure class="tall" data-category="interior">
+        <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=900&auto=format&fit=crop" alt="Private dining room table setting" width="900" height="1260" loading="lazy" />
+        <figcaption class="gallery-caption">Private Dining Room</figcaption>
+      </figure>
+      <figure data-category="bar">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=900&auto=format&fit=crop" alt="Wine glasses, styled after the wine list" width="900" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">Wine List</figcaption>
+      </figure>
+      <figure data-category="food">
+        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=900&auto=format&fit=crop" alt="Plated dessert, styled after Banana Foster Funnel Cake" width="900" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">Banana Foster Funnel Cake</figcaption>
+      </figure>
+      <figure class="wide" data-category="interior">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=1200&auto=format&fit=crop" alt="Restaurant entrance and exterior" width="1200" height="675" loading="lazy" />
+        <figcaption class="gallery-caption">Exterior &amp; Entrance</figcaption>
+      </figure>
+    </div>
+
+    <p class="text-center field-hint reveal" style="margin-top: 32px;">Placeholder gallery — every image here is stock photography standing in for the real dish; swap each one for professional photography of your actual plates, dining room, and bar.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="" alt="" />
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">GW <span>FINS</span></a>
+        <p>Modern Gulf seafood in the heart of New Orleans. Daily-changing fresh catch, inventive small plates, and a cocktail &amp; wine list built for it.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="private-events.html">Private Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Location &amp; Parking</a></li>
+          <li><a href="tel:+15045813467">(504) 581-3467</a></li>
+          <li><a href="mailto:info@gwfins.com">info@gwfins.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Dinner Nightly, from 5:00pm</p>
+        <p>808 Bienville St, New Orleans, LA 70112</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> GW Fins. All rights reserved.</span>
+      <span>Design template — content and imagery are placeholders pending final assets.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

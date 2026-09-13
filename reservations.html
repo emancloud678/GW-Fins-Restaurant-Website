@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reservations — GW Fins | New Orleans Seafood Restaurant</title>
+<meta name="description" content="Book a table at GW Fins, an upscale seafood restaurant in New Orleans, LA. For parties larger than 10, please call the restaurant directly." />
+<link rel="canonical" href="https://gwfins-restaurant.vercel.app/reservations.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GW Fins" />
+<meta property="og:title" content="Reservations — GW Fins | New Orleans Seafood Restaurant" />
+<meta property="og:description" content="Book a table at GW Fins, an upscale seafood restaurant in New Orleans, LA. For parties larger than 10, please call the restaurant directly." />
+<meta property="og:url" content="https://gwfins-restaurant.vercel.app/reservations.html" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Reservations — GW Fins | New Orleans Seafood Restaurant" />
+<meta name="twitter:description" content="Book a table at GW Fins, an upscale seafood restaurant in New Orleans, LA. For parties larger than 10, please call the restaurant directly." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "GW Fins",
+  "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop",
+  "servesCuisine": ["Seafood", "Cajun", "Creole"],
+  "priceRange": "$$$$",
+  "telephone": "+1-504-581-3467",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "808 Bienville St",
+    "addressLocality": "New Orleans",
+    "addressRegion": "LA",
+    "postalCode": "70112",
+    "addressCountry": "US"
+  },
+  "url": "https://gwfins-restaurant.vercel.app/",
+  "menu": "https://gwfins-restaurant.vercel.app/menu.html",
+  "acceptsReservations": "True",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "17:00", "closes": "21:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:00", "closes": "22:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">GW <span>FINS</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservations.html" class="is-active">Reservations</a>
+      <a href="about.html">About</a>
+      <a href="private-events.html">Private Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <span class="header-phone">Call <strong>(504) 581-3467</strong></span>
+      <a href="reservations.html" class="btn btn-brass">Reserve a Table</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-drawer">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservations.html">Reservations</a>
+      <a href="about.html">About</a>
+      <a href="private-events.html">Private Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="reservations.html" class="btn btn-brass btn-block">Reserve a Table</a>
+      <span class="header-phone">Large parties call <strong>(504) 581-3467</strong></span>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero" style="--hero-img: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop'); margin-top: 0;">
+  <div class="container">
+    <span class="eyebrow">Book a Table</span>
+    <h1>Reservations</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Reservations</div>
+  </div>
+</section>
+
+<section style="padding: 0;">
+  <div class="res-layout">
+    <div class="res-form-col">
+      <h2>Request Your Table</h2>
+      <p>Fill out the form below and we'll confirm your reservation by email. For same-day requests, please call the restaurant directly.</p>
+
+      <form id="reservation-form" novalidate>
+        <div class="form-row cols-3">
+          <div class="field">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" name="date" data-required />
+            <span class="field-error">Please select a date.</span>
+          </div>
+          <div class="field">
+            <label for="res-time">Time</label>
+            <select id="res-time" name="time" data-required>
+              <option value="">Select time</option>
+              <option>5:00 PM</option>
+              <option>5:30 PM</option>
+              <option>6:00 PM</option>
+              <option>6:30 PM</option>
+              <option>7:00 PM</option>
+              <option>7:30 PM</option>
+              <option>8:00 PM</option>
+              <option>8:30 PM</option>
+              <option>9:00 PM</option>
+            </select>
+            <span class="field-error">Please select a time.</span>
+          </div>
+          <div class="field">
+            <label for="res-party">Party Size</label>
+            <select id="res-party" name="partySize" data-required>
+              <option value="">Select guests</option>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+              <option value="10">10 guests</option>
+              <option value="12">12+ guests (large party)</option>
+            </select>
+            <span class="field-error">Please select a party size.</span>
+          </div>
+        </div>
+
+        <div id="large-party-note-standalone" class="large-party-note" hidden>
+          For parties of 11 or more, online booking is limited. Please call us directly at
+          <a href="tel:+15045813467"><strong>(504) 581-3467</strong></a> and our team will help arrange your reservation.
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="res-name">Full Name</label>
+            <input type="text" id="res-name" name="name" data-required placeholder="Jane Doe" />
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="res-phone">Phone Number</label>
+            <input type="tel" id="res-phone" name="phone" data-required placeholder="(504) 555-0110" />
+            <span class="field-error">Please enter a phone number.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="res-email">Email Address</label>
+          <input type="email" id="res-email" name="email" data-required placeholder="jane@email.com" />
+          <span class="field-error">Please enter a valid email address.</span>
+        </div>
+
+        <div class="field">
+          <label for="res-occasion">Occasion (optional)</label>
+          <select id="res-occasion" name="occasion">
+            <option value="">None</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Business Dinner</option>
+            <option>Date Night</option>
+            <option>Other Celebration</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="res-notes">Special Requests (optional)</label>
+          <textarea id="res-notes" name="notes" placeholder="Seating preference, allergies, accessibility needs, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-brass btn-block">Request Reservation</button>
+        <div class="form-error-banner" id="reservation-error" hidden>
+          Something went wrong submitting your request. Please try again, or call us directly at
+          <a href="tel:+15045813467"><strong>(504) 581-3467</strong></a>.
+        </div>
+      </form>
+
+      <div class="form-success" id="reservation-success">
+        <div class="icon-circle">&#10003;</div>
+        <h3>Request Received</h3>
+        <p id="reservation-summary"></p>
+        <p>We'll send a confirmation to your email shortly. Need to make a change? Call us at <strong>(504) 581-3467</strong>.</p>
+        <div id="large-party-followup" hidden>
+          <p style="color: var(--brass-dark);">Since your party is 11+, our team will call you to finalize details.</p>
+        </div>
+        <a href="index.html" class="btn btn-outline-dark">Back to Home</a>
+      </div>
+    </div>
+
+    <div class="res-info-col">
+      <div class="res-info-block">
+        <div class="icon">&#9742;</div>
+        <h3>Large Parties &amp; Groups</h3>
+        <p>For parties of 11 or more, please call us directly — our team will help design the right seating and menu for your group.</p>
+        <a href="tel:+15045813467" class="res-phone-cta">(504) 581-3467</a>
+      </div>
+      <div class="res-info-block">
+        <div class="icon">&#128337;</div>
+        <h3>Hours</h3>
+        <p>Dinner Nightly, from 5:00pm</p>
+      </div>
+      <div class="res-info-block">
+        <div class="icon">&#9878;</div>
+        <h3>Dress Code</h3>
+        <p>Business casual recommended. We want you comfortable — jackets welcome, not required.</p>
+      </div>
+      <div class="res-info-block">
+        <div class="icon">&#127959;</div>
+        <h3>Private Events</h3>
+        <p>Planning something larger? Visit our <a href="private-events.html" style="color: var(--brass-light); text-decoration: underline;">Private Events</a> page to inquire about our dining rooms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">GW <span>FINS</span></a>
+        <p>Modern Gulf seafood in the heart of New Orleans. Daily-changing fresh catch, inventive small plates, and a cocktail &amp; wine list built for it.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="private-events.html">Private Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Location &amp; Parking</a></li>
+          <li><a href="tel:+15045813467">(504) 581-3467</a></li>
+          <li><a href="mailto:info@gwfins.com">info@gwfins.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Dinner Nightly, from 5:00pm</p>
+        <p>808 Bienville St, New Orleans, LA 70112</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> GW Fins. All rights reserved.</span>
+      <span>Design template — content and imagery are placeholders pending final assets.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/reservations.js"></script>
+</body>
+</html>
