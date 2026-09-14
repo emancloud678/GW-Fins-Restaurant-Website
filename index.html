@@ -233,6 +233,14 @@
 <script src="js/main.js"></script>
 <!---chatbot code -->
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<style>
+  /* Keep the floating toggle clear of iPhone-style home-indicator safe
+     areas; must come after the widget's own stylesheet to win the cascade. */
+  :root {
+    --chat--window--bottom: max(16px, env(safe-area-inset-bottom) + 12px);
+    --chat--window--right: max(16px, env(safe-area-inset-right) + 12px);
+  }
+</style>
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 

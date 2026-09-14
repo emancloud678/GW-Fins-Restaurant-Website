@@ -88,9 +88,16 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   margin: 0 auto;
   padding: 0 32px;
 }
+@media (max-width: 768px) {
+  .container, .header-inner, .hero-inner { padding-left: 24px; padding-right: 24px; }
+}
+@media (max-width: 480px) {
+  .container, .header-inner, .hero-inner { padding-left: 18px; padding-right: 18px; }
+}
 
 section { padding: 100px 0; }
 @media (max-width: 700px) { section { padding: 64px 0; } }
+@media (max-width: 480px) { section { padding: 48px 0; } }
 
 .section-head {
   max-width: 680px;
@@ -267,6 +274,11 @@ section { padding: 100px 0; }
     padding: 40px 32px;
     gap: 6px;
   }
+  @media (max-width: 640px) {
+    /* Clears the fixed chat launcher (bottom-right) so it never sits on
+       top of the phone-number line at the end of the drawer. */
+    .mobile-drawer nav { padding: 32px 24px calc(64px + env(safe-area-inset-bottom) + 32px); }
+  }
   .mobile-drawer a {
     color: var(--white);
     font-family: var(--font-display);
@@ -278,6 +290,17 @@ section { padding: 100px 0; }
   .mobile-drawer .header-phone { display: block; color: rgba(255,255,255,0.7); margin-top: 20px; }
 }
 @media (min-width: 1181px) { .mobile-drawer { display: none; } }
+
+/* Phone-width header: shrink the bar and drop the header-row CTA (it's
+   already the first item in the drawer, full-width) so logo + hamburger
+   never have to compete with a nowrap button for space that isn't there. */
+@media (max-width: 640px) {
+  :root { --header-h: 68px; }
+  .header-inner { gap: 10px; }
+  .logo { font-size: 1.4rem; }
+  .header-actions { gap: 10px; }
+  .header-actions > a.btn { display: none; }
+}
 
 /* ---------- Hero ---------- */
 @keyframes heroZoom {
@@ -396,6 +419,37 @@ section { padding: 100px 0; }
   .hero, .hero-inner, .hero-scroll { animation: none; }
 }
 
+/* Mobile hero: the desktop background-size (a fixed % width on the photo
+   layer, used to drive the slow zoom) doesn't reliably cover a tall phone
+   viewport — on narrow/tall aspect ratios it can leave the image short of
+   the bottom edge. Mobile gets a true `cover` on the photo layer instead,
+   plus a purpose-built (not shrunk) type scale, tighter padding, and
+   stacked full-width CTAs. */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px;
+    background-size: cover, cover, cover;
+    animation: none;
+  }
+  .hero-inner {
+    padding-top: calc(var(--header-h) + 24px);
+    padding-bottom: 48px;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    letter-spacing: -0.005em;
+  }
+  .hero-sub { font-size: 1rem; max-width: 42ch; }
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .hero-ctas .btn { width: 100%; }
+  .hero-meta { padding-top: 20px; }
+}
+
 /* ---------- Page header (inner pages) ---------- */
 /* Each page sets --hero-img inline (a url(...) value); this class layers a
    darkening gradient + vignette OVER it in one background-image list, so the
@@ -433,6 +487,14 @@ section { padding: 100px 0; }
 .page-hero .eyebrow { color: var(--brass-light); }
 @media (prefers-reduced-motion: reduce) {
   .page-hero, .page-hero .container { animation: none; }
+}
+@media (max-width: 768px) {
+  /* Same cover-vs-percentage fix as .hero, see note above it. */
+  .page-hero {
+    min-height: 320px;
+    background-size: cover, cover, cover;
+    animation: none;
+  }
 }
 .breadcrumb {
   margin-top: 18px;
@@ -481,6 +543,7 @@ section { padding: 100px 0; }
 }
 .quick-link a.link-arrow::after { content: " →"; color: var(--brass); }
 @media (max-width: 800px) { .quick-links { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .quick-link { padding: 40px 24px; } }
 
 /* ---------- About teaser (home) ---------- */
 .split {
@@ -561,6 +624,10 @@ section { padding: 100px 0; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 18px 32px;
+}
+@media (max-width: 768px) {
+  .menu-section-switch { padding: 18px 24px; }
+  .menu-tabs-inner { padding: 14px 24px; }
 }
 .menu-tab {
   flex: none;
@@ -935,6 +1002,7 @@ section { padding: 100px 0; }
 }
 @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .site-footer { padding: 48px 0 24px; } }
 
 /* ---------- Utility ---------- */
 .text-center { text-align: center; }
